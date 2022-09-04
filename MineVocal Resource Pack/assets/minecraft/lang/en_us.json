@@ -1,0 +1,10 @@
+{
+	"mv.error": "ERROR: ",
+	"mv.error.unknownsinger": "Unknown singer name",
+	"mv.error.nophone": "Phone is not set",
+	"mv.error.unknownphone": "Can't find phone %1$s in current singer library %2$s",
+	"mv.error.nocache": "No cache found in the storage. Use %1$s and %2$s to calculate and write cache.",
+	"mv.info": "INFO: ",
+	"mv.info.cacheon": "Cache mode enabled. Use %1$s to calculate into cache and %2$s to play from cache.",
+	"mv.info.cacheoff": "Cache mode disabled. Use %1$s to calculate and play at once."
+}

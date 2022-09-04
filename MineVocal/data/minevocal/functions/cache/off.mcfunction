@@ -1,0 +1,2 @@
+scoreboard players set mv.docache minevocal.var 0
+tellraw @s [{"text": "[MineVocal] ", "bold":true, "color": "yellow"}, {"translate": "mv.info", "color": "white"}, {"translate": "mv.info.cacheoff", "bold": false, "color": "white", "with":[{"text":"/function minevocal:render", "color":"gray", "underlined":true, "clickEvent":{"action":"suggest_command", "value":"/function minevocal:render"}}]}]

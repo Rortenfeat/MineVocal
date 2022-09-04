@@ -1,0 +1,3 @@
+execute store success score #mv.test1 minevocal.var run data get storage minevocal:main Phone
+execute unless score #mv.test1 minevocal.var matches 1 run tellraw @s [{"text": "[MineVocal] ", "bold":true, "color": "yellow"}, {"translate": "mv.error", "color": "red"}, {"translate": "mv.error.nophone", "bold": false, "color": "white"}]
+execute if score #mv.test1 minevocal.var matches 1 run function minevocal:render/ft

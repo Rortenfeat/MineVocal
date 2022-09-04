@@ -1,0 +1,9 @@
+# rou>0, f(ap)=(100-rou)*ap/100+100*rou
+scoreboard players operation #mv.math1 minevocal.var = $mv.100 minevocal.const
+scoreboard players operation #mv.math1 minevocal.var -= mv.rou minevocal.var
+scoreboard players operation #mv.math1 minevocal.var *= #mv.ap minevocal.var
+scoreboard players operation #mv.math1 minevocal.var /= $mv.100 minevocal.const
+scoreboard players operation #mv.math2 minevocal.var = mv.rou minevocal.var
+scoreboard players operation #mv.math2 minevocal.var *= $mv.100 minevocal.const
+scoreboard players operation #mv.math1 minevocal.var += #mv.math2 minevocal.var
+scoreboard players operation #mv.ap minevocal.var = #mv.math1 minevocal.var

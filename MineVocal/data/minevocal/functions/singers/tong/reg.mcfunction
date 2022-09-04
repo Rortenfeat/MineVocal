@@ -1,0 +1,1 @@
+execute if data storage minevocal:main {Singer: "tong"} run function minevocal:singers/tong/setup

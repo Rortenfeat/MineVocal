@@ -1,0 +1,10 @@
+{
+	"mv.error": "错误：",
+	"mv.error.unknownsinger": "未知歌手名",
+	"mv.error.nophone": "音素未配置",
+	"mv.error.unknownphone": "无法在歌手数据库 %2$s 中找到音素 %1$s",
+	"mv.error.nocache": "未在储存中找到缓存。使用 %1$s 和 %2$s 以计算并写入缓存。",
+	"mv.info": "信息：",
+	"mv.info.cacheon": "缓存模式已启用。使用 %1$s 计算并写入缓存；使用 %2$s 从缓存中播放。",
+	"mv.info.cacheoff": "缓存模式已禁用。使用 %1$s 同时渲染并播放。"
+}
