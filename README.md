@@ -80,7 +80,7 @@ function minevocal:play
 
 | [![xCePeK.md.png](https://s1.ax1x.com/2022/09/20/xCePeK.md.png)](https://imgse.com/i/xCePeK) | [![xCe9L6.md.png](https://s1.ax1x.com/2022/09/20/xCe9L6.md.png)](https://imgse.com/i/xCe9L6) |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| 原始音频*（合成自 VOCALOID）*的波形和频谱                    | MineVocal 合成的波形和频谱*（部分高次谐波由 Minecraft 采样精度导致）* |
+| 原始音频（合成自 VOCALOID）的波形和频谱                      | MineVocal 合成的波形和频谱（部分高次谐波由 Minecraft 采样精度导致） |
 
 ## 自定义歌手、音素
 
