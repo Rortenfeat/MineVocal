@@ -22,6 +22,9 @@ execute if score mv.docache minevocal.var matches 1 run function minevocal:cache
 execute unless score mv.docache minevocal.var matches 1 run function minevocal:play/lookup
 execute unless score mv.docache minevocal.var matches 1 run schedule function minevocal:stop 4s append
 
+# debug
+# tellraw @s [{"score":{"name":"#mv.tone", "objective": "minevocal.var"}},{"text":" "},{"score":{"name":"#mv.s.v", "objective": "minevocal.var"}}]
+
 data remove storage minevocal:render temp.hs[0]
 execute store result score #mv.delta minevocal.var run data get storage minevocal:render temp.hs[0] 1.0
 scoreboard players operation #mv.targ minevocal.var += #mv.delta minevocal.var

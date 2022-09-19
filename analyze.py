@@ -5,18 +5,17 @@ import os
 import math
 
 singers = ["lty", "miku", "tong"]
-audio_format = [".wav", ".mp3", ".ogg", ".flac"]
 
-def midi2fq(note): return 440 * pow(2, (note-69)/12)
+def midi2fq(note): return 440 * pow(2, (note-99)/36)
 
 for s in singers:
 	phones = []; text = "data modify storage minevocal:render library set value ["
 	for fn in os.listdir("samples/"+s):
-		if os.path.isfile(f'samples/{s}/{fn}') and os.path.splitext(fn)[1] in audio_format: phones.append(os.path.splitext(fn)[0])
+		if os.path.isfile(f'samples/{s}/{fn}') and fn[-4:] == '.wav': phones.append(fn[:-4])
 	for p in phones:
 		text += f'{{phone: "{p}", sp:['
 		x, fs = sf.read(f'samples/{s}/{p}.wav')
-		if len(x.shape) > 1: x = x.T[0]
+		if len(x.shape) > 1: x = np.array(x[:,0], order='C')
 
 		# pyworld analyzing
 		_f0, t = pw.dio(x, fs)
@@ -28,7 +27,7 @@ for s in singers:
 		_sp_mean = np.mean(np.sqrt(_sp), axis=0)
 		_ap_mean = np.mean(_ap, axis=0)
 		sp=[]; ap=[]
-		for n in range(0, 137):
+		for n in range(0, 296):
 			i = midi2fq(n)/(fs/2/(len(_sp_mean)-1))
 			it = (int(math.floor(i)), i-i//1)
 			sp.append(_sp_mean[it[0]]*(1-it[1])+_sp_mean[it[0]+1]*(it[1]))

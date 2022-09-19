@@ -18,7 +18,7 @@ execute if data storage minevocal:main {Note: "A#3"} run scoreboard players set 
 execute if data storage minevocal:main {Note: "Bb3"} run scoreboard players set mv.note minevocal.var 58
 execute if data storage minevocal:main {Note: "B3"} run scoreboard players set mv.note minevocal.var 59
 execute if data storage minevocal:main {Note: "B#3"} run scoreboard players set mv.note minevocal.var 60
-execute if data storage minevocal:main {Note: "Cb3"} run scoreboard players set mv.note minevocal.var 59
+execute if data storage minevocal:main {Note: "Cb4"} run scoreboard players set mv.note minevocal.var 59
 execute if data storage minevocal:main {Note: "C4"} run scoreboard players set mv.note minevocal.var 60
 execute if data storage minevocal:main {Note: "C#4"} run scoreboard players set mv.note minevocal.var 61
 execute if data storage minevocal:main {Note: "Db4"} run scoreboard players set mv.note minevocal.var 61
@@ -39,7 +39,7 @@ execute if data storage minevocal:main {Note: "A#4"} run scoreboard players set 
 execute if data storage minevocal:main {Note: "Bb4"} run scoreboard players set mv.note minevocal.var 70
 execute if data storage minevocal:main {Note: "B4"} run scoreboard players set mv.note minevocal.var 71
 execute if data storage minevocal:main {Note: "B#4"} run scoreboard players set mv.note minevocal.var 72
-execute if data storage minevocal:main {Note: "Cb4"} run scoreboard players set mv.note minevocal.var 71
+execute if data storage minevocal:main {Note: "Cb5"} run scoreboard players set mv.note minevocal.var 71
 execute if data storage minevocal:main {Note: "C5"} run scoreboard players set mv.note minevocal.var 72
 execute if data storage minevocal:main {Note: "C#5"} run scoreboard players set mv.note minevocal.var 73
 execute if data storage minevocal:main {Note: "Db5"} run scoreboard players set mv.note minevocal.var 73
@@ -60,5 +60,5 @@ execute if data storage minevocal:main {Note: "A#5"} run scoreboard players set 
 execute if data storage minevocal:main {Note: "Bb5"} run scoreboard players set mv.note minevocal.var 82
 execute if data storage minevocal:main {Note: "B5"} run scoreboard players set mv.note minevocal.var 83
 execute if data storage minevocal:main {Note: "B#5"} run scoreboard players set mv.note minevocal.var 84
-execute if data storage minevocal:main {Note: "Cb5"} run scoreboard players set mv.note minevocal.var 83
+execute if data storage minevocal:main {Note: "Cb6"} run scoreboard players set mv.note minevocal.var 83
 execute if data storage minevocal:main {Note: "C6"} run scoreboard players set mv.note minevocal.var 84

@@ -12,5 +12,7 @@ execute if score #mv.gen minevocal.var matches 1.. run function minevocal:render
 # harmonic series
 scoreboard players set #mv.tone minevocal.var 0
 scoreboard players operation #mv.targ minevocal.var = mv.note minevocal.var
-data modify storage minevocal:render temp.hs set value [0, 12, 7, 5, 4, 3, 3, 2, 2, 2, 3, 4, 1, 1, 1, 1, 1]
+# convert midi from 12edo to 36edo
+function minevocal:misc/36edo
+data modify storage minevocal:render temp.hs set value [0,36,21,15,12,9,8,7,6,6,5,4,4,4,4,3,3,3,3,3,2,3,2,2,2,2,2,2,2,2,1,2]
 function minevocal:render/hs
