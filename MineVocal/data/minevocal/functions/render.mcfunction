@@ -3,10 +3,10 @@ execute store result score mv.note minevocal.var run data get storage minevocal:
 execute unless score mv.note minevocal.var matches 48..84 run function minevocal:misc/note2midi
 execute unless score mv.note minevocal.var matches 48..84 run scoreboard players set mv.note minevocal.var 60
 
-# get gender factor for spectral envelope shift. between -36 and 36 (2 octaves). else set to default 0
+# get gender factor for spectral envelope shift. between -72 and 72 (2 octaves). else set to default 0
 # lower to get more female like and higher to get more male like
 execute store result score mv.gen minevocal.var run data get storage minevocal:main Gender 1.0
-execute unless score mv.gen minevocal.var matches -36..36 run scoreboard players set mv.gen minevocal.var 0
+execute unless score mv.gen minevocal.var matches -72..72 run scoreboard players set mv.gen minevocal.var 0
 
 # get roughness for aperiodicity bias. between -100(completely sine) and 100(completely noise). else set to default 0
 execute store result score mv.rou minevocal.var run data get storage minevocal:main Roughness 1.0

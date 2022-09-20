@@ -17,7 +17,7 @@
    | Phone     | 字符串      | 歌手数据库中定义的音素（无） | 选择要发声的音素 |
    | Note      | 字符串/整数 | "C3".."C6" 或 48..84（60）   | 基频音高         |
    | Volume    | 整数        | 1..100（100）                | 音量             |
-   | Gender    | 整数        | -36..36（0）                 | 性别音素         |
+   | Gender    | 整数        | -72..72（0）                 | 性别音素         |
    | Roughness | 整数        | -100..100（0）               | 清浊音比例       |
    
    数据包中内置的歌手是 `"lty" `和 `"miku"`，她们都包含五个音素 `"a","e","i","o","u"`。
@@ -76,9 +76,9 @@ function minevocal:play
 
 > WORLD的输入是每一帧的**基频（F0）**、**频谱包络（spectral envelope）**和**非周期比值（aperiodicity）**。
 
-鉴于原版 Minecraft 声音播放的限制，本数据包使用 36 平均律内音阶拟合泛音列，通过各音高处对应的平均功率和平均非周期比值（使用 World 的 Python 包装器 [PyWorld](https://github.com/JeremyCCHsu/Python-Wrapper-for-World-Vocoder) 分析记录），播放相应音量的正弦波和噪音，得到粗略还原的频率响应。
+鉴于原版 Minecraft 声音播放的限制，本数据包使用 72 平均律内音阶拟合泛音列，通过各音高处对应的平均功率和平均非周期比值（使用 World 的 Python 包装器 [PyWorld](https://github.com/JeremyCCHsu/Python-Wrapper-for-World-Vocoder) 分析记录），播放相应音量的正弦波和噪音，得到粗略还原的频率响应。
 
-| [![xCePeK.md.png](https://s1.ax1x.com/2022/09/20/xCePeK.md.png)](https://imgse.com/i/xCePeK) | [![xCe9L6.md.png](https://s1.ax1x.com/2022/09/20/xCe9L6.md.png)](https://imgse.com/i/xCe9L6) |
+| [![xCePeK.md.png](https://s1.ax1x.com/2022/09/20/xCePeK.md.png)](https://imgse.com/i/xCePeK) | [![xCxNRS.md.png](https://s1.ax1x.com/2022/09/20/xCxNRS.md.png)](https://imgse.com/i/xCxNRS) |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | 原始音频（合成自 VOCALOID）的波形和频谱                      | MineVocal 合成的波形和频谱（部分高次谐波由 Minecraft 采样精度导致） |
 
@@ -88,6 +88,11 @@ function minevocal:play
 
 ## 历史
 
+- v0.3
+  - 36 平均律 => 72 平均律
+  - 32 次谐波 => 64 次谐波
+  - 剔除不会被播放的音，优化文件大小
+  - 修复噪音不播放的 bug
 - v0.2
   - 用 36 平均律代替了原来的 12 平均律，较为完美地贴合了 32 次以内的谐波；
   - 改进了 playsound 穷举结构（类多叉树），大大降低单次渲染的命令数（大大增加数据包大小）；
