@@ -6,4 +6,3 @@ execute if score #mv.tone minevocal.var matches 431..474 run function minevocal:
 execute if score #mv.tone minevocal.var matches 475..512 run function minevocal:play/_/5
 execute if score #mv.tone minevocal.var matches 513..551 run function minevocal:play/_/6
 execute if score #mv.tone minevocal.var matches 552..590 run function minevocal:play/_/7
-schedule function minevocal:stop 4s append

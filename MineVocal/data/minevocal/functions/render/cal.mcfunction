@@ -12,15 +12,15 @@ scoreboard players operation #mv.s.v minevocal.var *= mv.vol minevocal.var
 scoreboard players operation #mv.s.v minevocal.var /= $mv.100 minevocal.const
 scoreboard players operation #mv.s.v minevocal.var *= #mv.sp minevocal.var
 
-# noise volume
+# noise compute
 scoreboard players operation #mv.n.v minevocal.var = #mv.ap minevocal.var
 scoreboard players operation #mv.n.v minevocal.var *= mv.vol minevocal.var
 scoreboard players operation #mv.n.v minevocal.var /= $mv.100 minevocal.const
 scoreboard players operation #mv.n.v minevocal.var *= #mv.sp minevocal.var
+function minevocal:render/noise/into
 
 execute if score mv.docache minevocal.var matches 1 run function minevocal:cache/push
 execute unless score mv.docache minevocal.var matches 1 run function minevocal:play/lookup
-execute unless score mv.docache minevocal.var matches 1 run schedule function minevocal:stop 4s append
 
 # debug
 # tellraw @s [{"score":{"name":"#mv.tone", "objective": "minevocal.var"}},{"text":" "},{"score":{"name":"#mv.s.v", "objective": "minevocal.var"}}]

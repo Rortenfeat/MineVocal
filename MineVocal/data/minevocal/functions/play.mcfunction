@@ -1,3 +1,3 @@
-execute store success score #mv.test1 minevocal.var run data get storage minevocal:render cache[0]
+execute store success score #mv.test1 minevocal.var run data get storage minevocal:render cache.sine[0]
 execute unless score #mv.test1 minevocal.var matches 1 run tellraw @s [{"text": "[MineVocal] ", "bold":true, "color": "yellow"}, {"translate": "mv.error", "color": "red"}, {"translate": "mv.error.nocache", "bold": false, "color": "white", "with":[{"text":"/function minevocal:cache/on", "color":"gray", "underlined":true, "clickEvent":{"action":"suggest_command", "value":"/function minevocal:cache/on"}}, {"text":"/function minevocal:render", "color":"gray", "underlined":true, "clickEvent":{"action":"suggest_command", "value":"/function minevocal:render"}}]}]
 execute if score #mv.test1 minevocal.var matches 1 run function minevocal:play/into

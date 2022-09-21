@@ -1,0 +1,2 @@
+execute if score #mv.n.power minevocal.var matches 800000001.. run function minevocal:play/noise/compress/compress
+execute if score #mv.n.power minevocal.var matches 1..800000000 run scoreboard players operation #mv.n.power minevocal.var *= $mv.2 minevocal.const
