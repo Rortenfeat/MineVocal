@@ -1,3 +1,4 @@
+schedule clear minevocal:stop
 stopsound @a voice mvs:s.72
 stopsound @a voice mvs:s.78
 stopsound @a voice mvs:s.84

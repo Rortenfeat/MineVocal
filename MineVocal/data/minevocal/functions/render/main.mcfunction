@@ -1,6 +1,14 @@
 execute unless score mv.docache minevocal.var matches 1 run function minevocal:play/prepare
 execute if score mv.docache minevocal.var matches 1 run data modify storage minevocal:render cache set value {sine:[], noise:[]}
 
+# multi-tone sampling
+execute store success score #mv.test1 minevocal.var run data get storage minevocal:render temp.ft_list[0].mt[1]
+execute unless score #mv.test1 minevocal.var matches 1 run data modify storage minevocal:render temp.mtv set value [100s]
+execute if score #mv.test1 minevocal.var matches 1 run function minevocal:render/mt/into
+
+# debug
+# tellraw @s [{"nbt":"temp.mtv", "storage": "minevocal:render"}]
+
 data modify storage minevocal:render temp.sp set from storage minevocal:render temp.ft_list[0].sp
 data modify storage minevocal:render temp.ap set from storage minevocal:render temp.ft_list[0].ap
 
